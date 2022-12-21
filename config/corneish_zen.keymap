@@ -32,41 +32,41 @@
 // |  TAB |  Q  |  W  |  F  |  P  |  G  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
 // | CTRL |  A  |  R  |  S  |  T  |  D  |   |  H  |  N   |  E  |  I  |  O  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,  |  .  |  /  | SHFT |
-//                    |LAYER| DEL | SPC |   | SPC | ENT  | ALT |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &kp SEMI &kp bspc_del
+   &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &kp SEMI &bspc_del
    &kp LCTRL &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O    &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                  &to 1  &kp DEL &kp SPACE   &kp SPACE &KP RET &kp RALT
+                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
                         >;
                 };
-                number_layer {
+                lower_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
 // | `/~  |  1  |  2  |  3   |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3  | BT4 | BT5 |   |     |     | UP  |     |     | DEL  |
-// | SHFT |LYR 0|LYR 1|LYR 2 |     |     |   |     | LFT | DWN |RGHT |     | ESC  |
-//                    | LYR 0| CTRL| SPC |   | SPC |     | ALT |
+// | SHFT |     |     |      |     |     |   |     | LFT |DWN  |RGHT |     | ESC  |
+//                    | CTRL |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &gresc     &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8   &kp N9    &kp N0 &kp BSPC
+   &gresc    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8   &kp N9    &kp N0 &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans   &trans   &kp UP   &trans    &trans &kp DEL
-   &kp LSHFT  &to 0       &to 1       &to 2       &trans       &trans         &trans   &kp LEFT &kp DOWN &kp RIGHT &trans &trans
-                          	          &to 0       &kp LCTRL    &trans      &kp SPACE  &trans   &trans
+   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &kp LEFT &kp DOWN &kp RIGHT &trans &trans
+                          	        &kp LCTRL     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
 
-                symbol_layer {
+                raise_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
 // |  ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    |LYR 0|     | SPC |   | SPC |     | ALT |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp  ESC  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &to 0      &trans   &kp SPACE   &kp SPACE &trans    &kp trans
+                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
         };
