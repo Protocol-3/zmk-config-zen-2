@@ -25,6 +25,15 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
+        
+        tabesc: tab_escape {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TAB_ESCAPE";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp ESC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
     };
 };
 
@@ -38,6 +47,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
+        
         shift_caps: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "shift_caps";
@@ -55,7 +65,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "hold-preferred";
             tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
@@ -66,7 +76,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "hold-preferred";
             tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
@@ -87,7 +97,7 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,  |  .  |  /  | SHFT |
 //                  | GUI | NUMBER |SPC ENT|   |SPC ENT| SYMBOL  | ALT |
                         bindings = <
-   &kp TAB     &kp Q           &kp W          &kp F           &kp P          &kp G   &kp J   &kp L            &kp U              &kp Y            &kp SEMI            &bspc_del
+   &tabesc     &kp Q           &kp W          &kp F           &kp P          &kp G   &kp J   &kp L            &kp U              &kp Y            &kp SEMI            &bspc_del
    &kp LCTRL   &lh_pht LSHFT A &lh_pht LGUI R &lh_pht LALT S &lh_pht LCTRL T &kp D   &kp H   &rh_pht RCTRL N  &rh_pht RALT E     &rh_pht RGUI I   &rh_pht RSHFT O     &kp SQT
    &shift_caps &kp Z           &kp X          &kp C          &kp V           &kp B   &kp K   &kp M            &kp COMMA          &kp DOT          &kp FSLH            &kp RSHFT
                   &kp LGUI &to NUMBER &spc_ent  &spc_ent &to SYMBOL &kp RALT
