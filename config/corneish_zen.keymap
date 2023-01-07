@@ -80,7 +80,7 @@
             tapping-term-ms = <500>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <10>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <1 2 3 4 5 6 13 14 15 16 17 18 25 26 27 28 29 30>;    // <---[[right-hand keys]]
+            hold-trigger-key-positions = <1 2 3 4 5 6 13 14 15 16 17 18 25 26 27 28 29 30>;    // <---[[left-hand keys]]
         };
     };
 };
@@ -97,7 +97,7 @@
 // | SHFT   |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,  |  .  |  /  | SHFT |
 //                  | GUI | NUMBER |SPC ENT|   |SPC ENT| SYMBOL  | ALT |
                         bindings = <
-   &tabesc     &kp Q           &kp W          &kp F           &kp P          &kp G   &kp J   &kp L            &kp U              &kp Y            &kp SEMI            &bspc_del
+   &tabesc     &kp Q           &kp W          &kp F          &kp P           &kp G   &kp J   &kp L            &kp U              &kp Y            &kp SEMI            &bspc_del
    &kp LCTRL   &lh_pht LSHFT A &lh_pht LGUI R &lh_pht LALT S &lh_pht LCTRL T &kp D   &kp H   &rh_pht RCTRL N  &rh_pht RALT E     &rh_pht RGUI I   &rh_pht RSHFT O     &kp SQT
    &shift_caps &kp Z           &kp X          &kp C          &kp V           &kp B   &kp K   &kp M            &kp COMMA          &kp DOT          &kp FSLH            &kp RSHFT
                   &kp LGUI &to NUMBER &spc_ent  &spc_ent &to SYMBOL &kp RALT
@@ -126,7 +126,7 @@
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |NUMBER| SPC |   | ENT |DEFAULT| ALT |
                         bindings = <
-   &kp  ESC    &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &bspc_del
+   &kp ESC     &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &bspc_del
    &shift_caps &trans       &trans       &trans       &trans       &trans          &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
    &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
                     	                            &kp LGUI &to NUMBER   &spc_ent        &spc_ent   &to DEFAULT    &kp RALT
