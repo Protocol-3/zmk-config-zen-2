@@ -95,9 +95,49 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT &kp GUI>
-                , <&macro_tap &kp S>
-                , <&macro_release &kp LSHFT &kp GUI>
+                = <&macro_press &kp GUI>
+                , <&macro_tap &kp LSHFT &kp S>
+                , <&macro_release &kp GUI>
+                ;
+        };
+        copy: copy {
+            label = "copy";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp CTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp CTRL>
+                ;
+        };
+        cut: cut {
+            label = "cut";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp CTRL>
+                , <&macro_tap &kp x>
+                , <&macro_release &kp CTRL>
+                ;
+        };
+        paste: paste {
+            label = "paste";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp CTRL>
+                , <&macro_tap &kp v>
+                , <&macro_release &kp CTRL>
+                ;
+        };
+        undo: undo {
+            label = "undo";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp CTRL>
+                , <&macro_tap &kp z>
+                , <&macro_release &kp CTRL>
                 ;
         };
     };
@@ -156,12 +196,12 @@
 // -----------------------------------------------------------------------------------------
 // | ESC  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // |      |     |     |     |screenshot |         |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+// | SHFT | undo|cut  | copy|paste|     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |DEFAULT| SPC |   | ENT |DEFAULT| ALT |
                         bindings = <
-   &kp ESC     &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &bspc_del
+   &kp ESC      &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &bspc_del
    &none   &none   &none   &screenshot   &none   &none   &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-   &shift_caps &trans       &trans       &trans       &trans       &trans          &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
+   &shift_caps  &undo        &cut         &copy        &paste       &trans          &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
                     	                            &kp LGUI &to DEFAULT   &spc_ent        &spc_ent   &to DEFAULT    &kp RALT
                         >;
                 };
