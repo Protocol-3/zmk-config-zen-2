@@ -116,7 +116,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp x>
+                , <&macro_tap &kp X>
                 , <&macro_release &kp LCTRL>
                 ;
         };
@@ -126,7 +126,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp v>
+                , <&macro_tap &kp V>
                 , <&macro_release &kp LCTRL>
                 ;
         };
@@ -136,7 +136,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp z>
+                , <&macro_tap &kp Z>
                 , <&macro_release &kp LCTRL>
                 ;
         };
