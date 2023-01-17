@@ -156,7 +156,7 @@
 //                  | GUI | NUMBER |SPC ENT|   |SPC ENT| SYMBOL  | ALT |
                         bindings = <
    &tabesc     &kp Q           &kp W          &kp F          &kp P           &kp G   &kp J   &kp L            &kp U              &kp Y            &kp SEMI            &bspc_del
-   &kp LCTRL   &lh_pht LSHFT A &lh_pht LGUI R &lh_pht LALT S &lh_pht LCTRL T &kp D   &kp H   &rh_pht RCTRL N  &rh_pht RALT E     &rh_pht RGUI I   &rh_pht RSHFT O     &kp SQT
+   &kp LCTRL   &kp A           &kp R          &kp S          &kp T           &kp D   &kp H   &kp N            &kp E              &kp I            &kp O               &kp SQT
    &shift_caps &kp Z           &kp X          &kp C          &kp V           &kp B   &kp K   &kp M            &kp COMMA          &kp DOT          &kp FSLH            &kp RSHFT
                   &kp LGUI &to NUMBER &spc_ent  &spc_ent &to SYMBOL &kp RALT
                         >;
